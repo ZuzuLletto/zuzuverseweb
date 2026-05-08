@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yusuf Zuzu - Software Developer & Game Developer portfolio.">
+  <title>Zuzu | Software & Game Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="noise-layer" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Zuzu homepage">
+      <span class="brand-mark">Z</span>
+      <span>Zuzuverse</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell" data-parallax-section>
+      <div class="hero-copy">
+        <p class="eyebrow">Software Developer & Game Developer</p>
+        <h1 class="glitch" data-text="Zuzu">Zuzu</h1>
+        <p class="hero-subtitle">
+          <span class="typing-text" data-phrases='["Full-stack Developer & Hardware Enthusiast", "Python, C#, C++ and Flutter builder", "Game logic, circuits and clean UI fan"]'></span>
+          <span class="typing-caret" aria-hidden="true"></span>
+        </p>
+        <p class="hero-text">
+          A 15-year-old developer turning code into games, mobile apps, and hardware experiments.
+          Zudoku is live on Google Play.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">View Zudoku</a>
+        </div>
+      </div>
+
+      <aside class="status-panel glass-card tilt-card" aria-label="Zuzu profile status">
+        <div class="panel-topline">
+          <span class="live-dot"></span>
+          <span>online_profile.exe</span>
+        </div>
+        <div class="terminal-lines">
+          <p><span>&gt;</span> name: Yusuf "Zuzu"</p>
+          <p><span>&gt;</span> born: 27.06.2010</p>
+          <p><span>&gt;</span> stack: software + games + hardware</p>
+          <p><span>&gt;</span> mission: build things that feel alive</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" class="section-shell">
+      <div class="section-heading">
+        <p class="eyebrow">Apps / Projects</p>
+        <h2>Featured Build</h2>
+      </div>
+      <article class="project-card glass-card tilt-card">
+        <div class="project-logo">
+          <img src="assets/zudoku_logo.png" alt="Zudoku logo" onerror="this.classList.add('missing-logo')" />
+          <span aria-hidden="true">Z</span>
+        </div>
+        <div class="project-content">
+          <p class="project-kicker">Play Store release</p>
+          <h3>Zudoku</h3>
+          <p>
+            A clean, focused Sudoku mobile game by ZuzuVerse, built for fast play and a sharp puzzle flow
+          </p>
+          <div class="project-actions">
+            <a class="button primary" href="https://play.google.com/store/apps/details?id=com.zz.zudoku" target="_blank" rel="noopener noreferrer">Google Play</a>
+            <a class="button ghost" href="zudoku/privacy.html">Privacy</a>
+            <a class="button ghost" href="zudoku/terms.html">Terms</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills" class="section-shell">
+      <div class="section-heading">
+        <p class="eyebrow">Skill Cloud</p>
+        <h2>Interactive Tech Tags</h2>
+      </div>
+      <div class="tag-cloud" aria-label="Skills">
+        <button class="skill-tag core" style="--delay: 0s"><span>Code</span> Python</button>
+        <button class="skill-tag core" style="--delay: .05s"><span>Code</span> C#</button>
+        <button class="skill-tag systems" style="--delay: .1s"><span>Systems</span> C</button>
+        <button class="skill-tag systems" style="--delay: .15s"><span>Systems</span> C++</button>
+        <button class="skill-tag hardware" style="--delay: .2s"><span>Hardware</span> Arduino</button>
+        <button class="skill-tag mobile" style="--delay: .25s"><span>Mobile</span> Flutter</button>
+        <button class="skill-tag mobile" style="--delay: .3s"><span>Mobile</span> Dart</button>
+        <button class="skill-tag creative" style="--delay: .35s"><span>Build</span> Game Development</button>
+        <button class="skill-tag creative" style="--delay: .4s"><span>Build</span> Mobile Apps</button>
+        <button class="skill-tag hardware" style="--delay: .45s"><span>Build</span> Electronics</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>@byZuzu</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
