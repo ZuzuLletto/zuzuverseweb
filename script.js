@@ -142,7 +142,7 @@ function spawnShootingStar() {
 }
 
 function attachClickBursts() {
-  const codeSnippets = ["const zuzu = true;", "build();", "Zudoku.run()", "while(alive){code();}", "0xZUZU", "deploy_ready"];
+  const codeSnippets = ["const zuzu = true;", "build();", "Zudoku.run()", "TapOnTime.now()", "while(alive){code();}", "0xZUZU", "deploy_ready"];
   const interactiveSelector = "a, button";
 
   window.addEventListener("pointerdown", (event) => {
