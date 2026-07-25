@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LeafCal Privacy Policy - Health, Fitness & Calorie Tracker (KVKK & GDPR Compliant)">
+  <title>LeafCal Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="privacy-page">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="noise-layer" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">L</span>
+      <span>LeafCal</span>
+    </a>
+    <nav aria-label="Legal navigation">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+
+  <main class="section-shell">
+    <article class="glass-card privacy-card">
+      <p class="eyebrow">LeafCal Legal</p>
+      <h1>Privacy Policy</h1>
+      <p>This Privacy Policy applies to the LeafCal mobile application (Package Name: <code>com.zz.leafcal</code>), together with any associated services, backend infrastructure, and features operated by ZuzuVerse (hereinafter referred to as the "Service Provider", "we", "us", or "our"). This policy explains how we collect, process, store, and protect your data, in compliance with applicable data protection laws including the General Data Protection Regulation (GDPR) and the Turkish Personal Data Protection Law (KVKK - Law No. 6698).</p>
+
+      <h2>1. Collected Information: Personal, Physical & Health Data</h2>
+      <p>LeafCal is a calorie, nutrition, and health tracking application. To provide personalized metabolic insights, nutrient tracking, and progress management, the Application processes data provided directly by you when interacting with the app:</p>
+      <ul>
+        <li><strong>Physical & Metabolism Profile:</strong> Age, date of birth, gender, current weight, historical weight progress records, height, target weight, body fat percentage (%), and body circumference measurements (waist, neck, hip, and wrist).</li>
+        <li><strong>Activity & Lifestyle Data:</strong> Daily activity level, weekly workout frequency/days, estimated daily step counts, and daily sleep duration.</li>
+        <li><strong>Nutrition & Hydration Logs:</strong> Consumed food items, meal timestamps, total calories, macronutrient breakdowns (protein, fats, carbohydrates), micronutrients (sugar, sodium/salt, dietary fiber), daily water intake in milliliters (ml), and custom meal notes.</li>
+        <li><strong>Account & Device Identifiers:</strong> Automatically generated unique User ID (UID) and invite/referral codes.</li>
+      </ul>
+
+      <h2>2. Camera, Photo Gallery & Artificial Intelligence (AI) Analysis</h2>
+      <p>LeafCal incorporates AI-assisted meal analysis to simplify nutrition tracking:</p>
+      <ul>
+        <li><strong>Device Permissions:</strong> The Application requests access to your device's Camera (<code>android.permission.CAMERA</code> / iOS <code>NSCameraUsageDescription</code>) and Photo Gallery (iOS <code>NSPhotoLibraryUsageDescription</code>) solely to enable you to capture food photos or upload existing images of meals.</li>
+        <li><strong>Google Gemini AI Processing:</strong> When you submit a food photo for analysis, the image is transmitted securely via encrypted connections (HTTPS) to our backend server and to the <strong>Google Gemini AI API</strong> service. The image is processed exclusively to estimate meal composition, portion size, calories, and macronutrient values. Visual images are not used for public display or model training without consent.</li>
+      </ul>
+
+      <h2>3. Barcode Scanning & Open Food Facts Search</h2>
+      <p>To provide accurate packaged product lookup:</p>
+      <ul>
+        <li><strong>Barcode Reader:</strong> The camera permission is utilized by the <code>mobile_scanner</code> package to scan product barcodes directly on your device.</li>
+        <li><strong>Open Food Facts Integration:</strong> Scanned barcode strings are queried against the open-source product database hosted by <strong>Open Food Facts</strong> (<code>world.openfoodfacts.org</code>). No personal profile data or health metrics are sent during product database queries.</li>
+      </ul>
+
+      <h2>4. Advertising, Analytics & Tracking Identifiers (AdMob & ATT)</h2>
+      <p>LeafCal offers free features supported by in-app advertising:</p>
+      <ul>
+        <li><strong>Google AdMob (google_mobile_ads):</strong> The Application displays rewarded video ads and banner advertisements served through Google AdMob.</li>
+        <li><strong>App Tracking Transparency (iOS ATT):</strong> On iOS devices, personalized ad serving relies on explicit user consent requested via <code>NSUserTrackingUsageDescription</code>. Users can grant or deny permission at any time.</li>
+        <li><strong>Collected Advertising Data:</strong> Google AdMob may collect technical identifiers, IP addresses, mobile Advertising IDs (IDFA on iOS, AAID on Android), and ad interaction telemetry as described in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google's Partner Privacy Policy</a>.</li>
+      </ul>
+
+      <h2>5. In-App Purchases, Tokens & Subscriptions</h2>
+      <p>LeafCal provides premium features, token/coin packages, and monthly unlimited subscriptions via the <code>in_app_purchase</code> framework:</p>
+      <ul>
+        <li><strong>Payment Processing:</strong> All financial transactions, credit card data processing, billing, and subscription renewals are managed directly by official app store infrastructure (Apple App Store and Google Play Store).</li>
+        <li><strong>Financial Data Exclusion:</strong> LeafCal does <strong>NOT</strong> collect, store, transmit, or process your payment card numbers, bank details, or billing addresses. We receive only transaction completion receipts and token entitlement statuses.</li>
+      </ul>
+
+      <h2>6. Data Storage, Backend Sync & Infrastructure</h2>
+      <p>LeafCal employs both local storage and cloud synchronization to keep your data accessible across sessions:</p>
+      <ul>
+        <li><strong>Local Storage (shared_preferences):</strong> Your profile settings, local food logs, hydration counters, and app preferences are stored locally on your mobile device's encrypted storage.</li>
+        <li><strong>Cloud Synchronization:</strong> Meal history, token balances, subscription entitlements, and invite codes are synchronized securely with our backend server (<code>kcal-backend-1.onrender.com</code>) and database service (<strong>Supabase</strong>, <code>meal_logs</code> database table) over HTTPS/TLS encrypted connections.</li>
+      </ul>
+
+      <h2>7. Overview of Required Device Permissions</h2>
+      <p>The Application may request the following permissions on your mobile device:</p>
+      <ul>
+        <li><strong>Camera (android.permission.CAMERA / NSCameraUsageDescription):</strong> Required for capturing food photos for AI calorie analysis and scanning product barcodes.</li>
+        <li><strong>Photo Library (NSPhotoLibraryUsageDescription):</strong> Required for picking meal photos from your device gallery for AI analysis.</li>
+        <li><strong>Internet Access (android.permission.INTERNET):</strong> Required for AI image analysis, barcode queries, server data synchronization, and ad loading.</li>
+        <li><strong>App Tracking Transparency (NSUserTrackingUsageDescription - iOS):</strong> Used to request consent for personalized advertising via AdMob on iOS 14.5+.</li>
+      </ul>
+
+      <h2>8. Your Rights (GDPR / KVKK Compliance)</h2>
+      <p>Depending on your location, under GDPR (EU/EEA) and KVKK (Turkey), you hold specific rights regarding your personal and physical data:</p>
+      <ul>
+        <li><strong>Right of Access & Inspection:</strong> You have the right to request confirmation of whether your personal data is processed and receive a copy of your records.</li>
+        <li><strong>Right to Rectification:</strong> You can update or correct incomplete or inaccurate profile, health, or nutrition entries directly within the app or by contacting us.</li>
+        <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> You may request the deletion of your account, cloud meal logs, and personal metrics stored on our servers.</li>
+        <li><strong>Right to Withdraw Consent:</strong> Where processing is based on consent (such as camera usage or iOS ad tracking), you can revoke consent at any time through app settings or device settings.</li>
+        <li><strong>Right to Data Portability:</strong> You may request an export of your user data in a structured, machine-readable format.</li>
+      </ul>
+      <p>To exercise any of these rights, please submit your request to <a href="mailto:ybingol3463@gmail.com">ybingol3463@gmail.com</a>. Requests will be evaluated and fulfilled within 30 days free of charge.</p>
+
+      <h2>9. Third-Party Service Providers</h2>
+      <p>LeafCal integrates trusted third-party SDKs and service providers to operate its features. Each provider processes data in accordance with their respective privacy policies:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Play Services & Google Gemini AI API</a></li>
+        <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google AdMob</a></li>
+        <li><a href="https://world.openfoodfacts.org/terms-of-use" target="_blank" rel="noopener noreferrer">Open Food Facts</a></li>
+        <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Database Services</a></li>
+        <li><a href="https://render.com/privacy" target="_blank" rel="noopener noreferrer">Render Cloud Hosting</a></li>
+      </ul>
+
+      <h2>10. Data Retention & Account Deletion Policy</h2>
+      <p>We retain your personal data only for as long as necessary to fulfill the purposes outlined in this policy:</p>
+      <ul>
+        <li><strong>User-Provided Logs & Profile Data:</strong> Retained while your account remains active. If you request account deletion, all cloud meal logs (<code>meal_logs</code>), body metrics, and tokens will be permanently erased from active backend databases within 30 days.</li>
+        <li><strong>Local Data:</strong> You can purge all local logs instantly by clearing app data or uninstalling LeafCal from your device.</li>
+        <li><strong>Anonymized Telemetry:</strong> Aggregated analytical metrics that do not identify individuals may be retained indefinitely for quality improvement.</li>
+      </ul>
+
+      <h2>11. Protection of Minors (Children's Privacy)</h2>
+      <p>LeafCal is not intended for children under 16 years of age. We do not knowingly collect personal or health metrics from children. If we discover that a child under 16 has submitted personal information without parental consent, we will promptly delete that data from our servers. Parents or guardians who suspect their child has provided data can contact us at <a href="mailto:ybingol3463@gmail.com">ybingol3463@gmail.com</a>.</p>
+
+      <h2>12. Data Security & Technical Safeguards</h2>
+      <p>We implement industry-standard physical, procedural, and technological security controls including HTTPS/TLS encryption in transit, server firewall protections, strict access permissions, and database key encryption. However, please note that no transmission method over the Internet or electronic storage is 100% impenetrable.</p>
+
+      <h2>13. International Data Transfers</h2>
+      <p>Your data may be processed on servers located outside your country of residence (such as cloud nodes hosted by Render, Supabase, or Google Cloud). Where data transfers cross international borders, we ensure adequate safeguards are in place, including Standard Contractual Clauses (SCCs) and privacy compliance frameworks mandated by applicable law.</p>
+
+      <h2>14. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy periodically to reflect app updates or legal requirements. Material changes will be published on this page with an updated effective date. Continued use of LeafCal after modifications indicates acceptance of the updated terms.</p>
+      <p>This privacy policy is effective as of <strong>July 25, 2026</strong>.</p>
+
+      <h2>15. Contact Information</h2>
+      <p>If you have any questions, inquiries, or privacy concerns regarding LeafCal, KVKK, or GDPR compliance, please contact the Service Provider at:</p>
+      <p><strong>ZuzuVerse / Yusuf Zuzu</strong><br>
+      Email: <a href="mailto:ybingol3463@gmail.com">ybingol3463@gmail.com</a><br>
+      Website: <a href="https://zuzuverseweb.pages.dev" target="_blank" rel="noopener noreferrer">zuzuverseweb</a></p>
+    </article>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>
