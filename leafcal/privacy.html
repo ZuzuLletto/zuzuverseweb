@@ -36,17 +36,18 @@
       <h2>1. Collected Information: Personal, Physical & Health Data</h2>
       <p>LeafCal is a calorie, nutrition, and health tracking application. To provide personalized metabolic insights, nutrient tracking, and progress management, the Application processes data provided directly by you when interacting with the app:</p>
       <ul>
-        <li><strong>Physical & Metabolism Profile:</strong> Age, date of birth, gender, current weight, historical weight progress records, height, target weight, body fat percentage (%), and body circumference measurements (waist, neck, hip, and wrist).</li>
-        <li><strong>Activity & Lifestyle Data:</strong> Daily activity level, weekly workout frequency/days, estimated daily step counts, and daily sleep duration.</li>
-        <li><strong>Nutrition & Hydration Logs:</strong> Consumed food items, meal timestamps, total calories, macronutrient breakdowns (protein, fats, carbohydrates), micronutrients (sugar, sodium/salt, dietary fiber), daily water intake in milliliters (ml), and custom meal notes.</li>
-        <li><strong>Account & Device Identifiers:</strong> Automatically generated unique User ID (UID) and invite/referral codes.</li>
+        <li><strong>Physical & Metabolism Profile:</strong> Age, date of birth, gender, current weight, historical weight progress records, height, target weight, body fat percentage (%), and body circumference measurements (waist, neck, hip, and wrist). Used for calculating BMR (Basal Metabolic Rate) and TDEE (Total Daily Energy Expenditure).</li>
+        <li><strong>Activity & Lifestyle Data:</strong> Daily activity level, weekly workout frequency/days, estimated daily step counts, daily sleep duration, and diet model preferences (e.g., Lean Cut, Water Fasting).</li>
+        <li><strong>Nutrition, Hydration & Text Inputs:</strong> Consumed food items, meal timestamps, total calories, macronutrient breakdowns (protein, fats, carbohydrates), micronutrients (sugar, sodium/salt, dietary fiber), daily water intake in milliliters (ml), custom meal notes, and text entries submitted for AI food analysis.</li>
+        <li><strong>Account & Authentication Data (Optional):</strong> Creating an account is voluntary. You may use LeafCal as a Guest (without logging in) or register an optional account (via Email, Google Sign-In, Apple Sign-In, or third-party authentication). If you register an account, we process your email address, display name, authentication provider IDs, and unique user tokens to enable multi-device sync and account recovery.</li>
+        <li><strong>Account & Device Identifiers:</strong> Automatically generated unique User ID (UID), token balance, and invite/referral codes (e.g., <code>KCAL-XXXX-XXXX</code>).</li>
       </ul>
 
       <h2>2. Camera, Photo Gallery & Artificial Intelligence (AI) Analysis</h2>
       <p>LeafCal incorporates AI-assisted meal analysis to simplify nutrition tracking:</p>
       <ul>
         <li><strong>Device Permissions:</strong> The Application requests access to your device's Camera (<code>android.permission.CAMERA</code> / iOS <code>NSCameraUsageDescription</code>) and Photo Gallery (iOS <code>NSPhotoLibraryUsageDescription</code>) solely to enable you to capture food photos or upload existing images of meals.</li>
-        <li><strong>Google Gemini AI Processing:</strong> When you submit a food photo for analysis, the image is transmitted securely via encrypted connections (HTTPS) to our backend server and to the <strong>Google Gemini AI API</strong> service. The image is processed exclusively to estimate meal composition, portion size, calories, and macronutrient values. Visual images are not used for public display or model training without consent.</li>
+        <li><strong>Google Gemini AI & Text Processing:</strong> When you submit a food photo or text description for analysis, the input data is transmitted securely via encrypted connections (HTTPS) to our backend server and to the <strong>Google Gemini AI API</strong> service. The image or text is processed exclusively to estimate meal composition, portion size, calories, and macronutrient values. Visual images are not sold to third parties or used for public display without consent.</li>
       </ul>
 
       <h2>3. Barcode Scanning & Open Food Facts Search</h2>
@@ -59,7 +60,7 @@
       <h2>4. Advertising, Analytics & Tracking Identifiers (AdMob & ATT)</h2>
       <p>LeafCal offers free features supported by in-app advertising:</p>
       <ul>
-        <li><strong>Google AdMob (google_mobile_ads):</strong> The Application displays rewarded video ads and banner advertisements served through Google AdMob.</li>
+        <li><strong>Google AdMob (google_mobile_ads):</strong> The Application displays rewarded video ads (capped at a maximum of 8 rewarded video ads per day per user) and banner advertisements served through Google AdMob.</li>
         <li><strong>App Tracking Transparency (iOS ATT):</strong> On iOS devices, personalized ad serving relies on explicit user consent requested via <code>NSUserTrackingUsageDescription</code>. Users can grant or deny permission at any time.</li>
         <li><strong>Collected Advertising Data:</strong> Google AdMob may collect technical identifiers, IP addresses, mobile Advertising IDs (IDFA on iOS, AAID on Android), and ad interaction telemetry as described in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google's Partner Privacy Policy</a>.</li>
       </ul>
@@ -71,11 +72,11 @@
         <li><strong>Financial Data Exclusion:</strong> LeafCal does <strong>NOT</strong> collect, store, transmit, or process your payment card numbers, bank details, or billing addresses. We receive only transaction completion receipts and token entitlement statuses.</li>
       </ul>
 
-      <h2>6. Data Storage, Backend Sync & Infrastructure</h2>
+      <h2>6. Data Storage, Backend Sync, Widgets & Infrastructure</h2>
       <p>LeafCal employs both local storage and cloud synchronization to keep your data accessible across sessions:</p>
       <ul>
-        <li><strong>Local Storage (shared_preferences):</strong> Your profile settings, local food logs, hydration counters, and app preferences are stored locally on your mobile device's encrypted storage.</li>
-        <li><strong>Cloud Synchronization:</strong> Meal history, token balances, subscription entitlements, and invite codes are synchronized securely with our backend server (<code>kcal-backend-1.onrender.com</code>) and database service (<strong>Supabase</strong>, <code>meal_logs</code> database table) over HTTPS/TLS encrypted connections.</li>
+        <li><strong>Local Storage & Home Screen Widgets:</strong> Your profile settings, local food logs, hydration counters, and app preferences are stored locally on your mobile device's encrypted storage. Home Screen Widgets access local cached metrics (such as daily calorie budget and water intake) strictly to render widgets on your device screen without transmitting widget data externally.</li>
+        <li><strong>Cloud Synchronization & Authentication:</strong> Meal history, token balances, subscription entitlements, account credentials, and invite codes are synchronized securely with our backend server (<code>kcal-backend-1.onrender.com</code>) and database / auth services (<strong>Supabase Auth & Database</strong>, <code>meal_logs</code> database table) over HTTPS/TLS encrypted connections.</li>
       </ul>
 
       <h2>7. Overview of Required Device Permissions</h2>
@@ -104,15 +105,17 @@
         <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Play Services & Google Gemini AI API</a></li>
         <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google AdMob</a></li>
         <li><a href="https://world.openfoodfacts.org/terms-of-use" target="_blank" rel="noopener noreferrer">Open Food Facts</a></li>
-        <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Database Services</a></li>
+        <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Database & Authentication Services</a></li>
         <li><a href="https://render.com/privacy" target="_blank" rel="noopener noreferrer">Render Cloud Hosting</a></li>
       </ul>
 
-      <h2>10. Data Retention & Account Deletion Policy</h2>
+      <h2>10. Data Retention & "Reset All Data" ("Tüm Verilerimi Sıfırla") Policy</h2>
       <p>We retain your personal data only for as long as necessary to fulfill the purposes outlined in this policy:</p>
       <ul>
-        <li><strong>User-Provided Logs & Profile Data:</strong> Retained while your account remains active. If you request account deletion, all cloud meal logs (<code>meal_logs</code>), body metrics, and tokens will be permanently erased from active backend databases within 30 days.</li>
-        <li><strong>Local Data:</strong> You can purge all local logs instantly by clearing app data or uninstalling LeafCal from your device.</li>
+        <li><strong>In-App Data Reset ("Tüm Verilerimi Sıfırla"):</strong> Users can purge all tracking data at any time via Settings > "Tüm Verilerimi Sıfırla". Executing this action immediately and permanently deletes meal history, weight logs, hydration records, and physical profile metrics from local storage and backend servers. Jeton balances, referral codes, and app preferences (theme/language) are preserved.</li>
+        <li><strong>In-App Account Deletion (Store Compliant):</strong> Registered users can initiate full account and profile deletion directly within the LeafCal mobile app settings.</li>
+        <li><strong>Web / Email Deletion Request:</strong> You may also request permanent account and data erasure by emailing <a href="mailto:ybingol3463@gmail.com">ybingol3463@gmail.com</a> with the subject "Account Deletion Request". All cloud meal logs (<code>meal_logs</code>), authentication credentials, body metrics, token balances, and profile records will be permanently erased from active backend databases within 30 days.</li>
+        <li><strong>Guest / Local Data:</strong> You can purge local logs instantly by clearing app data or uninstalling LeafCal from your device.</li>
         <li><strong>Anonymized Telemetry:</strong> Aggregated analytical metrics that do not identify individuals may be retained indefinitely for quality improvement.</li>
       </ul>
 
