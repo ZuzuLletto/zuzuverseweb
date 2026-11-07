@@ -29,11 +29,27 @@
     <section class="hero section-shell">
       <div class="hero-copy">
         <p class="eyebrow" data-tr="Yazılım ve Oyun Geliştiricisi">Software Developer & Game Developer</p>
-        <h1>Zuzu</h1>
-        <p class="hero-text" data-tr="Mobil uygulamalar, Roblox oyunları ve işletmeler için web siteleri geliştiriyorum.">I build mobile apps, Roblox games, and websites for businesses.</p>
+        <h1>Yusuf Zuzu<span class="hero-period">.</span></h1>
+        <p class="hero-text" data-tr="16 yaşındayım. Merak ettiğim fikirleri kodla hayata geçiriyorum. Mobil uygulamalar ve Roblox oyunları geliştiriyor, işletmeler için web siteleri yapıyor ve elektronikle uğraşıyorum.">I’m 16. I build mobile apps, Roblox games, and websites for businesses. I also experiment with electronics.</p>
         <div class="hero-actions">
           <a class="button primary" href="#projects" data-tr="Projeleri Gör">View Projects</a>
         </div>
+      </div>
+
+      <div class="profile-panel glass-card" aria-hidden="true">
+        <div class="profile-bar">
+          <span class="profile-dot"></span>
+          <span>profile.js</span>
+        </div>
+        <pre><code><span class="code-keyword">const</span> zuzu = {
+  name: <span class="code-value">"Yusuf Zuzu"</span>,
+  age: <span class="code-value">16</span>,
+  builds: [
+    <span class="code-value" data-tr="&quot;Mobil uygulamalar&quot;">"Mobile apps"</span>,
+    <span class="code-value" data-tr="&quot;Roblox oyunları&quot;">"Roblox games"</span>,
+    <span class="code-value" data-tr="&quot;Web siteleri&quot;">"Websites"</span>,
+  ],
+};</code></pre>
       </div>
     </section>
 
@@ -166,8 +182,43 @@
           </div>
         </article>
 
+        <article class="project-card glass-card" data-category="startup website">
+          <div class="project-logo">
+            <img src="assets/lootify_logo.png" alt="" onerror="this.classList.add('missing-logo')" />
+            <span aria-hidden="true">L</span>
+          </div>
+          <div class="project-content">
+            <p class="project-kicker" data-tr="Oyun Ödül Platformu">Gaming Rewards Platform</p>
+            <h3>Lootify</h3>
+            <p data-tr="Arcade oyunları oynayarak ve görevleri tamamlayarak oyunlar için dijital E-PIN kodları kazanabileceğin ödül platformu.">A rewards platform where players can earn digital game codes by playing arcade games and completing tasks.</p>
+            <div class="project-actions">
+              <a class="button primary" href="https://playlootify.com/" target="_blank" rel="noopener noreferrer" data-tr="Siteyi Aç">Visit Website</a>
+              <a class="button ghost" href="https://github.com/ZuzuLletto/Lootify_web" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
         <article class="project-card glass-card" data-category="website">
-          <div class="project-logo project-monogram" aria-hidden="true">HO</div>
+          <div class="project-logo">
+            <img src="assets/sayfa_icon.svg" alt="" onerror="this.classList.add('missing-logo')" />
+            <span aria-hidden="true">S</span>
+          </div>
+          <div class="project-content">
+            <p class="project-kicker" data-tr="PDF Okuyucu">PDF Reader</p>
+            <h3>Sayfa</h3>
+            <p data-tr="Kitaplarını, ayraçlarını, notlarını ve okuma ilerlemeni cihazında saklayan kişisel PDF kitaplığı.">A personal PDF library that saves your books, bookmarks, notes, and reading progress on your device.</p>
+            <div class="project-actions">
+              <a class="button primary" href="https://pdf-kitap-okuma-sitesi.pages.dev/" target="_blank" rel="noopener noreferrer" data-tr="Siteyi Aç">Visit Website</a>
+              <a class="button ghost" href="https://github.com/ZuzuLletto/pdf-kitap-okuma-sitesi" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-category="website">
+          <div class="project-logo">
+            <img src="assets/hkboptik_icon.png" alt="" onerror="this.classList.add('missing-logo')" />
+            <span aria-hidden="true">HO</span>
+          </div>
           <div class="project-content">
             <p class="project-kicker" data-tr="Müşteri Sitesi">Client Website</p>
             <h3>HKB Optik</h3>
@@ -179,7 +230,10 @@
         </article>
 
         <article class="project-card glass-card" data-category="website">
-          <div class="project-logo project-monogram" aria-hidden="true">KB</div>
+          <div class="project-logo">
+            <img src="assets/karabey_icon.svg" alt="" onerror="this.classList.add('missing-logo')" />
+            <span aria-hidden="true">KB</span>
+          </div>
           <div class="project-content">
             <p class="project-kicker" data-tr="Müşteri Sitesi">Client Website</p>
             <h3>Karabey Burdur Şiş Köfte Piyaz</h3>
@@ -191,7 +245,10 @@
         </article>
 
         <article class="project-card glass-card" data-category="website">
-          <div class="project-logo project-monogram" aria-hidden="true">ŞY</div>
+          <div class="project-logo">
+            <img src="assets/sahinyildiz_icon.png" alt="" onerror="this.classList.add('missing-logo')" />
+            <span aria-hidden="true">ŞY</span>
+          </div>
           <div class="project-content">
             <p class="project-kicker" data-tr="Müşteri Sitesi">Client Website</p>
             <h3>Şahin Yıldız</h3>
