@@ -13,152 +13,176 @@
 <body>
   <canvas id="starfield" aria-hidden="true"></canvas>
   <div class="noise-layer" aria-hidden="true"></div>
-  <div class="cursor-glow" aria-hidden="true"></div>
 
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Zuzu homepage">
+    <a class="brand" href="#top" aria-label="Zuzu homepage" data-tr-label="Zuzu ana sayfa">
       <span class="brand-mark">Z</span>
       <span>Zuzuverse</span>
     </a>
-    <nav aria-label="Main navigation">
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
+    <nav aria-label="Main navigation" data-tr-label="Ana menü">
+      <a href="#projects" data-tr="Projeler">Projects</a>
+      <a href="#skills" data-tr="Yetkinlikler">Skills</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero section-shell" data-parallax-section>
+    <section class="hero section-shell">
       <div class="hero-copy">
-        <p class="eyebrow">Software Developer & Game Developer</p>
-        <h1 class="glitch" data-text="Zuzu">Zuzu</h1>
-        <p class="hero-subtitle">
-          <span class="typing-text" data-phrases='["Full-stack Developer & Hardware Enthusiast", "Python, C#, C++ and Flutter builder", "Game logic, circuits and clean UI fan"]'></span>
-          <span class="typing-caret" aria-hidden="true"></span>
-        </p>
-        <p class="hero-text">
-          A 16-year-old developer turning code into games, mobile apps, and hardware experiments.
-          LeafCal, Zudoku and Tap on Time are live on Google Play.
-        </p>
+        <p class="eyebrow" data-tr="Yazılım ve Oyun Geliştiricisi">Software Developer & Game Developer</p>
+        <h1>Zuzu</h1>
+        <p class="hero-text" data-tr="Mobil uygulamalar, Roblox oyunları ve işletmeler için web siteleri geliştiriyorum.">I build mobile apps, Roblox games, and websites for businesses.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#projects">View Projects</a>
+          <a class="button primary" href="#projects" data-tr="Projeleri Gör">View Projects</a>
         </div>
       </div>
-
-      <aside class="status-panel glass-card tilt-card" aria-label="Zuzu profile status">
-        <div class="panel-topline">
-          <span class="live-dot"></span>
-          <span>online_profile.exe</span>
-        </div>
-        <div class="terminal-lines">
-          <p><span>&gt;</span> name: Yusuf "Zuzu"</p>
-          <p><span>&gt;</span> born: 27.06.2010</p>
-          <p><span>&gt;</span> stack: software + games + hardware</p>
-          <p><span>&gt;</span> mission: build things that feel alive</p>
-        </div>
-      </aside>
     </section>
 
     <section id="projects" class="section-shell">
       <div class="section-heading">
-        <p class="eyebrow">Apps / Projects</p>
-        <h2>Featured Builds</h2>
+        <p class="eyebrow" data-tr="Portföy">Portfolio</p>
+        <h2 data-tr="Seçili Projeler">Selected Projects</h2>
+      </div>
+      <div class="project-filters" hidden>
+        <div class="filter-row" role="group" aria-label="Project categories" data-tr-label="Proje kategorileri">
+          <button type="button" class="filter-button" data-filter="all" aria-pressed="true" data-tr="Tümü">All</button>
+          <button type="button" class="filter-button" data-filter="games" aria-pressed="false" data-tr="Oyunlar">Games</button>
+          <button type="button" class="filter-button" data-filter="startup" aria-pressed="false" data-tr="Girişimler">Ventures</button>
+          <button type="button" class="filter-button" data-filter="website" aria-pressed="false" data-tr="Web Siteleri">Websites</button>
+        </div>
+        <div class="filter-row game-filters" role="group" aria-label="Game platforms" data-tr-label="Oyun platformları" hidden>
+          <button type="button" class="filter-button" data-filter="mobile" aria-pressed="false" data-tr="Mobil">Mobile</button>
+          <button type="button" class="filter-button" data-filter="roblox" aria-pressed="false" data-tr="Roblox">Roblox</button>
+        </div>
       </div>
       <div class="projects-grid">
-        <article class="project-card glass-card tilt-card">
+        <article class="project-card glass-card" data-category="startup">
           <div class="project-logo">
-            <img src="assets/leafcal_logo.png" alt="LeafCal logo" onerror="this.classList.add('missing-logo')" />
+            <img src="assets/leafcal_logo.png" alt="" onerror="this.classList.add('missing-logo')" />
             <span aria-hidden="true">L</span>
           </div>
           <div class="project-content">
-            <p class="project-kicker">Play Store release</p>
+            <p class="project-kicker" data-tr="Google Play uygulaması">Play Store release</p>
             <h3>LeafCal</h3>
-            <p>
-              An AI-powered calorie, food, water, and fitness tracker by ZuzuVerse — instant Gemini AI food photo recognition, barcode scanner, and smart macro tracking.
-            </p>
+            <p data-tr="Gemini ile yemek fotoğraflarını tanıyan, barkod okutan ve kalori, makro, su ile egzersiz takibi sunan mobil uygulama.">An AI-powered calorie, food, water, and fitness tracker by ZuzuVerse — instant Gemini AI food photo recognition, barcode scanner, and smart macro tracking.</p>
             <div class="project-actions">
               <a class="button primary" href="https://play.google.com/store/apps/details?id=com.zz.leafcal" target="_blank" rel="noopener noreferrer">Google Play</a>
-              <a class="button ghost" href="leafcal/privacy.html">Privacy</a>
-              <a class="button ghost" href="leafcal/terms.html">Terms</a>
+              <a class="button ghost" href="leafcal/privacy.html" data-tr="Gizlilik">Privacy</a>
+              <a class="button ghost" href="leafcal/terms.html" data-tr="Kullanım Koşulları">Terms</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card glass-card tilt-card">
+        <article class="project-card glass-card" data-category="mobile">
           <div class="project-logo">
-            <img src="assets/zudoku_logo.png" alt="Zudoku logo" onerror="this.classList.add('missing-logo')" />
+            <img src="assets/zudoku_logo.png" alt="" onerror="this.classList.add('missing-logo')" />
             <span aria-hidden="true">Z</span>
           </div>
           <div class="project-content">
-            <p class="project-kicker">Play Store release</p>
+            <p class="project-kicker" data-tr="Google Play uygulaması">Play Store release</p>
             <h3>Zudoku</h3>
-            <p>
-              A clean, focused Sudoku mobile game by ZuzuVerse, built for fast play and a sharp puzzle flow.
-            </p>
+            <p data-tr="Hızlı ve sade bir bulmaca deneyimi sunan mobil Sudoku oyunu.">A clean, focused Sudoku mobile game by ZuzuVerse, built for fast play and a sharp puzzle flow.</p>
             <div class="project-actions">
               <a class="button primary" href="https://play.google.com/store/apps/details?id=com.zz.zudoku" target="_blank" rel="noopener noreferrer">Google Play</a>
-              <a class="button ghost" href="zudoku/privacy.html">Privacy</a>
-              <a class="button ghost" href="zudoku/terms.html">Terms</a>
+              <a class="button ghost" href="zudoku/privacy.html" data-tr="Gizlilik">Privacy</a>
+              <a class="button ghost" href="zudoku/terms.html" data-tr="Kullanım Koşulları">Terms</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card glass-card tilt-card">
+        <article class="project-card glass-card" data-category="mobile">
           <div class="project-logo">
-            <img src="assets/tapontime_logo.png" alt="Tap on Time logo" onerror="this.classList.add('missing-logo')" />
+            <img src="assets/tapontime_logo.png" alt="" onerror="this.classList.add('missing-logo')" />
             <span aria-hidden="true">T</span>
           </div>
           <div class="project-content">
-            <p class="project-kicker">Play Store release</p>
+            <p class="project-kicker" data-tr="Google Play uygulaması">Play Store release</p>
             <h3>Tap on Time</h3>
-            <p>
-              A fast-paced reflex game by ZuzuVerse — hit the target at the perfect moment, beat your high score, and stay in the zone.
-            </p>
+            <p data-tr="Hedefi doğru anda vurarak kendi rekorunu geçmeye çalıştığın hızlı bir refleks oyunu.">A fast-paced reflex game by ZuzuVerse — hit the target at the perfect moment, beat your high score, and stay in the zone.</p>
             <div class="project-actions">
               <a class="button primary" href="https://play.google.com/store/apps/details?id=com.zz.tapontime" target="_blank" rel="noopener noreferrer">Google Play</a>
-              <a class="button ghost" href="tapontime/privacy.html">Privacy</a>
-              <a class="button ghost" href="tapontime/terms.html">Terms</a>
+              <a class="button ghost" href="tapontime/privacy.html" data-tr="Gizlilik">Privacy</a>
+              <a class="button ghost" href="tapontime/terms.html" data-tr="Kullanım Koşulları">Terms</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card glass-card tilt-card">
+        <article class="project-card glass-card" data-category="startup website">
           <div class="project-logo">
+            <img src="assets/zuzunfc_icon.svg" alt="" onerror="this.classList.add('missing-logo')" />
             <span aria-hidden="true">Z</span>
           </div>
           <div class="project-content">
-            <p class="project-kicker">Website</p>
+            <p class="project-kicker" data-tr="Web Sitesi">Website</p>
             <h3>ZuzuNFC</h3>
-            <p>A site showcasing NFC cards, digital business cards, and QR menus for businesses.</p>
+            <p data-tr="İşletmelere NFC kart, dijital kartvizit ve QR menü çözümleri sunan girişim.">A site showcasing NFC cards, digital business cards, and QR menus for businesses.</p>
             <div class="project-actions">
-              <a class="button primary" href="https://zuzunfc.com" target="_blank" rel="noopener noreferrer">Visit Website</a>
+              <a class="button primary" href="https://zuzunfc.com" target="_blank" rel="noopener noreferrer" data-tr="Siteyi Aç">Visit Website</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card glass-card tilt-card">
+        <article class="project-card glass-card" data-category="roblox">
           <div class="project-logo">
+            <img src="assets/build_a_pyramid_icon.png" alt="" onerror="this.classList.add('missing-logo')" />
             <span aria-hidden="true">B</span>
           </div>
           <div class="project-content">
-            <p class="project-kicker">Roblox game</p>
+            <p class="project-kicker" data-tr="Roblox Oyunu">Roblox game</p>
             <h3>Build A Pyramid</h3>
-            <p>Dig clay, mold bricks, and build a pyramid solo or with friends. Use conveyors and minions to automate the work.</p>
+            <p data-tr="Kil çıkar, tuğla üret ve tek başına ya da arkadaşlarınla piramit inşa et. Konveyörler ve yardımcılarla işi otomatikleştir.">Dig clay, mold bricks, and build a pyramid solo or with friends. Use conveyors and minions to automate the work.</p>
             <div class="project-actions">
-              <a class="button primary" href="https://www.roblox.com/tr/games/80083313267417/Build-A-Pyramid" target="_blank" rel="noopener noreferrer">Play on Roblox</a>
+              <a class="button primary" href="https://www.roblox.com/games/80083313267417/Build-A-Pyramid" target="_blank" rel="noopener noreferrer" data-tr="Roblox’ta Oyna">Play on Roblox</a>
             </div>
           </div>
         </article>
 
-        <article class="project-card glass-card tilt-card">
+        <article class="project-card glass-card" data-category="roblox">
           <div class="project-logo">
+            <img src="assets/catch_the_finish_icon.png" alt="" onerror="this.classList.add('missing-logo')" />
             <span aria-hidden="true">C</span>
           </div>
           <div class="project-content">
-            <p class="project-kicker">Roblox game</p>
+            <p class="project-kicker" data-tr="Roblox Oyunu">Roblox game</p>
             <h3>Catch The Finish</h3>
-            <p>Race rally cars across four circuits and win by keeping all four wheels on a moving tow truck for three seconds.</p>
+            <p data-tr="Dört pistte ralli arabalarıyla yarış. Kazanmak için dört tekeri hareketli çekicinin üzerinde üç saniye tut.">Race rally cars across four circuits and win by keeping all four wheels on a moving tow truck for three seconds.</p>
             <div class="project-actions">
-              <a class="button primary" href="https://www.roblox.com/tr/games/85800489082588/Catch-The-Finish" target="_blank" rel="noopener noreferrer">Play on Roblox</a>
+              <a class="button primary" href="https://www.roblox.com/games/85800489082588/Catch-The-Finish" target="_blank" rel="noopener noreferrer" data-tr="Roblox’ta Oyna">Play on Roblox</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-category="website">
+          <div class="project-logo project-monogram" aria-hidden="true">HO</div>
+          <div class="project-content">
+            <p class="project-kicker" data-tr="Müşteri Sitesi">Client Website</p>
+            <h3>HKB Optik</h3>
+            <p data-tr="HKB Optik’in şube ve garanti bilgilerini sunan dijital kartı.">A digital card for HKB Optik with branch and warranty information.</p>
+            <div class="project-actions">
+              <a class="button primary" href="https://hkboptik.xyz" target="_blank" rel="noopener noreferrer" data-tr="Siteyi Aç">Visit Website</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-category="website">
+          <div class="project-logo project-monogram" aria-hidden="true">KB</div>
+          <div class="project-content">
+            <p class="project-kicker" data-tr="Müşteri Sitesi">Client Website</p>
+            <h3>Karabey Burdur Şiş Köfte Piyaz</h3>
+            <p data-tr="Fiyatları, içerikleri ve alerjen bilgilerini gösteren dijital restoran menüsü.">A digital restaurant menu with prices, ingredients, and allergen information.</p>
+            <div class="project-actions">
+              <a class="button primary" href="https://karabey.zuzunfc.com" target="_blank" rel="noopener noreferrer" data-tr="Siteyi Aç">Visit Website</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-category="website">
+          <div class="project-logo project-monogram" aria-hidden="true">ŞY</div>
+          <div class="project-content">
+            <p class="project-kicker" data-tr="Müşteri Sitesi">Client Website</p>
+            <h3>Şahin Yıldız</h3>
+            <p data-tr="miskets kurucu ortağı için doğrudan iletişim bağlantıları içeren dijital kartvizit.">A digital business card for the miskets co-founder with direct contact links.</p>
+            <div class="project-actions">
+              <a class="button primary" href="https://sahinyildiz.zuzunfc.com" target="_blank" rel="noopener noreferrer" data-tr="Siteyi Aç">Visit Website</a>
             </div>
           </div>
         </article>
@@ -167,21 +191,21 @@
 
     <section id="skills" class="section-shell">
       <div class="section-heading">
-        <p class="eyebrow">Skill Cloud</p>
-        <h2>Interactive Tech Tags</h2>
+        <p class="eyebrow" data-tr="Teknolojiler">Technology</p>
+        <h2 data-tr="Yetkinlikler">Skills</h2>
       </div>
-      <div class="tag-cloud" aria-label="Skills">
-        <button class="skill-tag core" style="--delay: 0s"><span>Code</span> Python</button>
-        <button class="skill-tag core" style="--delay: .05s"><span>Code</span> C#</button>
-        <button class="skill-tag systems" style="--delay: .1s"><span>Systems</span> C</button>
-        <button class="skill-tag systems" style="--delay: .15s"><span>Systems</span> C++</button>
-        <button class="skill-tag hardware" style="--delay: .2s"><span>Hardware</span> Arduino</button>
-        <button class="skill-tag mobile" style="--delay: .25s"><span>Mobile</span> Flutter</button>
-        <button class="skill-tag mobile" style="--delay: .3s"><span>Mobile</span> Dart</button>
-        <button class="skill-tag creative" style="--delay: .35s"><span>Build</span> Game Development</button>
-        <button class="skill-tag creative" style="--delay: .4s"><span>Build</span> Mobile Apps</button>
-        <button class="skill-tag hardware" style="--delay: .45s"><span>Build</span> Electronics</button>
-      </div>
+      <ul class="tag-cloud" aria-label="Skills" data-tr-label="Yetkinlikler">
+        <li class="skill-tag core"><span data-tr="Kod">Code</span> Python</li>
+        <li class="skill-tag core"><span data-tr="Kod">Code</span> C#</li>
+        <li class="skill-tag systems"><span data-tr="Sistem">Systems</span> C</li>
+        <li class="skill-tag systems"><span data-tr="Sistem">Systems</span> C++</li>
+        <li class="skill-tag hardware"><span data-tr="Donanım">Hardware</span> Arduino</li>
+        <li class="skill-tag mobile"><span data-tr="Mobil">Mobile</span> Flutter</li>
+        <li class="skill-tag mobile"><span data-tr="Mobil">Mobile</span> Dart</li>
+        <li class="skill-tag creative"><span data-tr="Proje">Build</span> <span class="skill-name" data-tr="Oyun Geliştirme">Game Development</span></li>
+        <li class="skill-tag creative"><span data-tr="Proje">Build</span> <span class="skill-name" data-tr="Mobil Uygulamalar">Mobile Apps</span></li>
+        <li class="skill-tag hardware"><span data-tr="Proje">Build</span> <span class="skill-name" data-tr="Elektronik">Electronics</span></li>
+      </ul>
     </section>
 
   </main>
